@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restart Creations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="m-0 p-0 font-sans bg-gray-200 text-gray-900">
+
+    <nav id="navbar" class="fixed top-0 w-full bg-transparent text-white p-4 z-50 transition-all ease-in-out duration-500">
+        <div class="flex justify-between items-center mx-auto w-4/5">
+            <div class="flex items-center">
+                <img src="https://via.placeholder.com/50" alt="Logo" class="mr-4">
+                <h1>Restart Creations</h1>
+            </div>
+            <ul class="list-none">
+                <li class="inline-block mx-2">
+                    <a href="javascript:void(0);" onclick="scrollToSection('home')" class="text-white no-underline hover:text-yellow-400 transition-all ease-in-out duration-300">
+                        <i class="fas fa-home"></i> Home
+                    </a>
+                </li>
+                <li class="inline-block mx-2">
+                    <a href="javascript:void(0);" onclick="scrollToSection('services')" class="text-white no-underline hover:text-yellow-400 transition-all ease-in-out duration-300">
+                        <i class="fas fa-camera"></i> Services
+                    </a>
+                </li>
+                <li class="inline-block mx-2">
+                    <a href="javascript:void(0);" onclick="scrollToSection('about')" class="text-white no-underline hover:text-yellow-400 transition-all ease-in-out duration-300">
+                        <i class="fas fa-info-circle"></i> About
+                    </a>
+                </li>
+                <li class="inline-block mx-2">
+                    <a href="javascript:void(0);" onclick="scrollToSection('contact')" class="text-white no-underline hover:text-yellow-400 transition-all ease-in-out duration-300">
+                        <i class="fas fa-envelope"></i> Contact
+                    </a>
+                </li>
+                <li class="inline-block mx-2">
+                    <a href="#" onclick="openLoginPage()" class="bg-red-500 px-4 py-2 rounded text-white no-underline hover:bg-red-600 transition-all ease-in-out duration-300">
+                        <i class="fas fa-user-circle"></i> Login
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="h-screen bg-cover bg-center flex justify-center items-center text-white" style="background-image: url('https://via.placeholder.com/1500x800')">
+        <div class="text-center">
+            <h2 class="text-6xl">Welcome to Restart Creations</h2>
+            <p class="text-2xl mt-4">Your ultimate solution for professional photography and videography services.</p>
+            <button class="bg-gray-900 text-white px-6 py-3 rounded mt-8 hover:bg-gray-700 transition-all ease-in-out duration-300" onclick="scrollToSection('services')">View Services</button>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-gray-200 text-center">
+        <h2 class="text-5xl mb-12">Our Services</h2>
+        <div class="flex justify-center items-center flex-wrap">
+            <div class="service m-4 p-8 bg-white shadow-lg rounded max-w-md">
+                <img src="https://via.placeholder.com/150" alt="Photography" class="mb-4 rounded">
+                <h3 class="text-3xl mb-4">Photography</h3>
+                <p>We capture stunning photos with professional precision and artistic flair.</p>
+            </div>
+            <div class="service m-4 p-8 bg-white shadow-lg rounded max-w-md">
+                <img src="https://via.placeholder.com/150" alt="Videography" class="mb-4 rounded">
+                <h3 class="text-3xl mb-4">Videography</h3>
+                <p>Our videography services bring your moments to life, telling stories that last forever.</p>
+            </div>
+        </div>
+        <button class="bg-gray-900 text-white px-6 py-3 rounded mt-8 hover:bg-gray-700 transition-all ease-in-out duration-300" onclick="location.href='quotation.html'">Get a Quotation</button>
+    </section>
+
+    <section id="about" class="py-24 text-center">
+        <h2 class="text-5xl mb-12">About Us</h2>
+        <div class="about-container flex justify-center items-center">
+            <img src="https://via.placeholder.com/300" alt="About Us" class="mr-8 rounded">
+            <p class="max-w-xl">Restart Creations is dedicated to providing top-notch photography and videography services. Our team of professionals is passionate about capturing your precious moments with creativity and elegance. We are committed to delivering quality and excellence to make your memories unforgettable.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-200 text-center">
+        <h2 class="text-5xl mb-12">Contact Us</h2>
+        <div class="contact-info flex justify-center items-start flex-wrap p-8 bg-white shadow-lg rounded mx-4">
+            <div class="address w-full md:w-1/2 p-8">
+                <h3 class="text-3xl mb-4">Visit Us</h3>
+                <p class="mb-8">Restart Creations<br>Unterführungstrasse 40, 4600 Olten</p>
+                <div id="map" class="h-64"></div>
+            </div>
+            <div class="form-container w-full md:w-1/2 p-8">
+                <h3 class="text-3xl mb-4">Get in Touch</h3>
+                <form>
+                    <input type="text" placeholder="Name" required class="w-full p-2 mb-4 border rounded">
+                    <input type="email" placeholder="Email" required class="w-full p-2 mb-4 border rounded">
+                    <textarea placeholder="Message" required class="w-full p-2 mb-4 border rounded h-40"></textarea>
+                    <button type="submit" class="bg-gray-900 text-white px-6 py-3 rounded hover:bg-gray-700 transition-all ease-in-out duration-300">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white p-6 text-center">
+        <p>&copy; 2023 Restart Creations</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black', 'bg-opacity-80');
+            } else {
+                navbar.classList.remove('bg-black', 'bg-opacity-80');
+            }
+        });
+
+        function initMap() {
+            const location = { lat: 47.3495, lng: 7.9039 };
+            const map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 15,
+                center: location
+            });
+            new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+        initMap();
+
+        function openLoginPage() {
+            window.location.href = "login.html";
+        }
+
+        function scrollToSection(id) {
+            const offset = 60;
+            $('html, body').animate({
+                scrollTop: $("#" + id).offset().top - offset
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Restart Creations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-200 min-h-screen p-4">
+
+    <div class="bg-white shadow-lg rounded p-8 max-w-4xl mx-auto">
+        <h1 class="text-2xl mb-6">Welcome back, <span id="customerName">John Doe</span>!</h1>
+
+        <h2 class="text-xl mb-4">Your Services</h2>
+        <table class="w-full text-left table-auto mb-8">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Service</th>
+                    <th class="px-4 py-2">Event Date</th>
+                    <th class="px-4 py-2">Status</th>
+                    <th class="px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="servicesTable">
+                <tr>
+                    <td class="border px-4 py-2">Photography</td>
+                    <td class="border px-4 py-2">2023-12-12</td>
+                    <td class="border px-4 py-2">Confirmed</td>
+                    <td class="border px-4 py-2">
+                        <button class="bg-blue-500 text-white px-2 py-1 rounded mr-2" onclick="requestFeedback()">Request Feedback</button>
+                        <button class="bg-green-500 text-white px-2 py-1 rounded" onclick="viewPhotos()">View Photos</button>
+                    </td>
+                </tr>
+                <!-- More service items... -->
+            </tbody>
+        </table>
+
+        <button onclick="logout()" class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700">Logout</button>
+    </div>
+
+    <script>
+        function logout() {
+            // Implement the logout process, like clearing the session or token and redirecting to the login or home page
+            window.location.href = "index.html";
+        }
+
+        function requestFeedback() {
+            // Implement the functionality to allow users to leave a message or request feedback
+            alert('Feedback request form or modal goes here.');
+        }
+
+        function viewPhotos() {
+            // Redirect to a page or open a modal where users can view their photos
+            window.location.href = 'photos.html'; // Replace 'photos.html' with the actual URL where photos can be viewed
+        }
+    </script>
+</body>
+
+</html>
